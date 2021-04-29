@@ -1,0 +1,20 @@
+.tablas-maestras-container {
+  display: grid;
+  grid-auto-flow: column;
+  padding: 0 80px;
+}
+
+.tablas-maestras-title {
+  justify-self: end;
+  margin-bottom: 0;
+}
+
+.tablas-maestras-log-out {
+  justify-self: end;
+  margin-top: 25px;
+  color: #526af3;
+  text-decoration: underline;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
