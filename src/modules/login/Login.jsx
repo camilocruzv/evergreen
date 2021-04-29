@@ -15,7 +15,7 @@ const Login = () => {
   const history = useHistory();
 
   const handleLogin = async (data) => {
-    const [error, resp] = await axios.post('http://ec2-50-17-107-241.compute-1.amazonaws.com/auth/singin/', data)
+    const [error, resp] = await axios.post(process.env.REACT_APP_BACKEND_URL, data)
       .then((response) => [null, response])
       .catch((err) => [err, err]);
 
@@ -29,7 +29,7 @@ const Login = () => {
 
   return (
     <div className="login-form">
-      <h2 className="login-title">Bienvenido</h2>
+      <h2 className="login-title">Bienvenido/a</h2>
       <form className="hazmat-modal-form" onSubmit={handleSubmit(handleLogin)}>
         <div className="login-inputs">
           <TextField
